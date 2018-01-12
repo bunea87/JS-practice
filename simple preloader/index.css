@@ -1,0 +1,63 @@
+.spiner{
+height: 200px;
+margin-top: 200px;
+
+margin-left: 500px;
+}
+
+#content{
+  color: #777;
+  font-family: Arial;
+  padding: 20px;
+  text-align: center;
+}
+
+.backdrop{
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+
+#preloader{
+  width: 50px;
+  height: 20px;
+  position: absolute;
+
+}
+
+#preloader>div{
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 10px;
+  float: left;
+  margin-right: 10px;
+
+  animation-name: upDown;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+#preloader>div:nth-child(1){
+  animation-delay: -0.3s;
+}
+#preloader>div:nth-child(2){
+  animation-delay: 0s;
+}
+#preloader>div:nth-child(3){
+  animation-delay: 0.3s;
+}
+#preloader>div:last-child{
+  margin-right: 0;
+}
+
+
+@keyframes upDown{
+  0%{ transform: translateY(0px);}
+  20%{ transform: translateY(-20px);}
+  40%{ transform: translateY(-20px);}
+  100%{ transform: translateY(0px);}
+}
